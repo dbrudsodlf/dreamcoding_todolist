@@ -6,9 +6,9 @@ export default function Navbar() {
   return (
     <div className={styles.top}>
       <div className={styles.darkmode}>
-        <p>
+        <button className={styles.darkmodebtn}>
           <CiLight />
-        </p>
+        </button>
       </div>
       <div className={styles.btn}>
         <button className={styles.btn1}>All</button>
