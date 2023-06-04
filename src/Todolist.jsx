@@ -1,4 +1,4 @@
-import "./Todolist.css";
+import "./Todolist.module.css";
 import Navbar from "./components/Navbar";
 import Checklist from "./components/Checklist";
 import AddTodo from "./components/AddTodo";

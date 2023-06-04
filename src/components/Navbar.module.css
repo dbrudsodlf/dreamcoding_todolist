@@ -1,0 +1,18 @@
+.top{
+    display: flex;
+    flex-direction: row;
+}
+
+.darkmode{
+    font-size: 20px;
+    font-style: bold;
+}
+
+.btn{
+}
+
+.btn_1,
+.btn_2,
+.btn_3{
+    all: unset;
+}
