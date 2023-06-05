@@ -23,3 +23,11 @@
     font: 1em sans-serif;
     font-weight:600;
 }
+
+.btn_select{
+    all: unset;
+    padding: 10px;
+    font: 1em sans-serif;
+    font-weight:600;
+    border-bottom: solid 2px black;
+}
