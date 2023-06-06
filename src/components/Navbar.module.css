@@ -19,15 +19,15 @@
 .btn2,
 .btn3{
     all: unset;
-    padding: 10px;
+    margin: 10px 10px 3px 0;
     font: 1em sans-serif;
     font-weight:600;
 }
 
 .btn_select{
     all: unset;
-    padding: 10px;
+    margin: 10px 10px 3px 0;
     font: 1em sans-serif;
     font-weight:600;
-    border-bottom: solid 2px black;
+    border-bottom: solid 3px black ;
 }

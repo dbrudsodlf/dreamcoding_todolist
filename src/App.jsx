@@ -1,4 +1,4 @@
-import "./App.module.css";
+import styles from './App.module.css';
 import {React,useEffect} from "react";
 import Navbar from "./components/Navbar";
 import Checklist from "./components/Checklist";
@@ -15,11 +15,11 @@ function App() {
   });
 
   return (
-    <>
+    <div className={styles.App}>
       <Navbar />
       <Checklist />
       <AddTodo/>
-    </>
+      </div>
   );
 }
 

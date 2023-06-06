@@ -3,7 +3,7 @@ import { CiLight } from "react-icons/ci";
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
-  const [btn1,setBtn1]=useState(0);
+  const [btn1,setBtn1]=useState(1);
   const [btn2,setBtn2]=useState(0);
   const [btn3,setBtn3]=useState(0);
 

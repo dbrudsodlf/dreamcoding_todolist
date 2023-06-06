@@ -1,0 +1,15 @@
+.addtodo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+}
+.todo,.todosubmit{
+    all:unset;
+    background-color: #fff;
+}
+
+.todo{
+    border: 1px solid #000;
+    border-radius: 10px;
+}
