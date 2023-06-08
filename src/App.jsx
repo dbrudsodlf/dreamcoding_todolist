@@ -2,7 +2,6 @@ import styles from './App.module.css';
 import {React,useEffect} from "react";
 import Navbar from "./components/Navbar";
 import Checklist from "./components/Checklist";
-import AddTodo from "./components/AddTodo";
 
 function App() {
   function setScreenSize() {
@@ -15,10 +14,9 @@ function App() {
   });
 
   return (
-    <div className={styles.App}>
-      <Navbar />
-      <Checklist />
-      <AddTodo/>
+    <div className={styles.app}>
+      <Navbar className={styles.navbar}/>
+      <Checklist className={styles.checklist}/>
       </div>
   );
 }

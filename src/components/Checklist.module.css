@@ -1,15 +1,22 @@
 .list{
     list-style: none;
     padding:0;
-    height: 100%;
-    background-color: rgb(213, 70, 70);
-}
+    height: 80vh;
+    background-color:rgb(49, 44, 102);
+    padding:1em;
+   }
 .todo{
     display: flex;
     flex-direction:row;
+    color: white;
+    margin-bottom: 1em;
 }
  .deletebtn{
     all:unset;
+    background-color: #7f7f7f4f;
+    border-radius: 100%;
+    padding: 4px 3px 3px 3px;
+    
  }
  .div1{
     display: flex;
@@ -20,4 +27,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
  }
+ .checkbox{
+   margin-right: 1em;
+   accent-color: rgb(255, 149, 0);
+ }
+ 
+ .do{
+   text-decoration:line-through;
+   text-decoration-thickness:2px;
+ }
+ 

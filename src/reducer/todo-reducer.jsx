@@ -1,32 +1,19 @@
-export default function todoReducer(todo,action){
+export default function todoReducer(todos,action){
     switch(action.type){
-        // case 'updated':{
-        //     const{prev,current}=action;
-        //     return{
-        //         ...person,
-        //         mentors:person.mentors.map((mentor)=>{
-        //             if(mentor.name===prev){
-        //                 return{ ...mentor,name:current}
-        //             }
-        //             return mentor;
-        //         }),
-        //     };
-        // }
-
         case 'added':{
-            const {name,title}=action;
+            const {todo}=action;
             return{
-                ...todo,
-                mentors:[...person.mentors,{name,title}],
+                ...todos,
+                todo
             };
         }
 
-        case 'deleted':{
-            return{
-                ...person,
-                mentors:person.mentors.filter((mentor)=>mentor.name!==action.name),
-            };
-      }
+    //     case 'deleted':{
+    //         return{
+    //             ...todos,
+    //             mentors:person.mentors.filter((mentor)=>mentor.name!==action.name),
+    //         };
+    //   }
             
       default:{
         throw Error(`알 수 없는 액션 타입이다: ${action.type} `)

@@ -32,7 +32,7 @@ export default function Navbar() {
     <div className={styles.top}>
       <div className={styles.darkmode}>
         <button className={styles.darkmodebtn}>
-          <CiLight />
+          <CiLight size={24}/>
         </button>
       </div>
       <div className={styles.btn}>

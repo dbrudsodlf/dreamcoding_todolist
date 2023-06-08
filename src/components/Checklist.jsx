@@ -1,35 +1,48 @@
 import { React, useState } from "react";
 import { CiTrash } from "react-icons/ci";
 import styles from "./Checklist.module.css";
+import AddTodo from "./AddTodo.jsx";
 
 export default function Checkllist() {
-  const [checked, setChecked] = useState(false);
-  const [todo, setTodo] = useState(["거거", "아아"]);
-  const handleChange = () => setChecked((prev) => !prev);
-  return (
-    <div className={styles.todolist}>
+    const [todos, setTodos] = useState([
+    {id:'123',text:'짐싸기',checked:'true'},
+    {id:'345',text:'짐풀기',checked:'false'},
+  ]);
+  const handleChange = () => {
+    todos.checked((prev) => !prev);
+  };
+  const handleAdd=(todo)=>{
+    console.log(todo);
+    console.log(todos);
+    setTodos([...todos,todo]);
+  };
+    return (
+    <section className={styles.todolist}>
       <ul className={styles.list}>
-        {todo.map((todo) => (
-          <li key={todo.id} className={styles.todo}>
+        {todos.map((todos) => (
+          <li key={todos.id} className={styles.todo}>
             <div className={styles.divforspace}>
             <div className={styles.div1}>
               <input
                 id="checkbox"
                 type="checkbox"
-                value={checked}
+                value={todos.checked}
+                className={styles.checkbox}
                 onChange={handleChange}
               />
-              <p>{todo}</p>
+
+              <p className={todos.checked===true?`${styles.do}`:``}>{todos.text}</p>
             </div>
             <div className={styles.btndiv}>
               <button className={styles.deletebtn}>
-                <CiTrash />
+                <CiTrash size={24}/>
               </button>
             </div>
             </div>
           </li>
         ))}
       </ul>
-    </div>
+      <AddTodo onAdd={handleAdd}/>
+    </section>
   );
 }
