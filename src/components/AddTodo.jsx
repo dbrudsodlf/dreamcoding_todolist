@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import styles from './AddTodo.module.css';
+import styles from './AddTodo2.module.css';
 import {v4 as uuidv4} from 'uuid';
 
 export default function AddTodo({onAdd}) {
@@ -10,18 +10,18 @@ export default function AddTodo({onAdd}) {
     if(text.trim().length===0){
       return;
     }//trim이란 text의 여백을 없애버림
-    onAdd({id:uuidv4(),text,checked:'false'});
+    onAdd({id:uuidv4(),text,status:'active'});
     setText('');
   }
   return (
-    <form onSubmit={handleSubmit} className={styles.addtodo}>
+    <form className={styles.form} onSubmit={handleSubmit} >
       <input  
-      className={styles.todo} 
+      className={styles.input} 
       type="text" 
       value={text} 
       onChange={handleChange}
       placeholder="Add Todo" />
-      <button  className={styles.todosubmit}>Add</button>
+      <button  className={styles.button}>Add</button>
     </form>
   );
   
